@@ -30,6 +30,8 @@ class ProductOfferServicePointStorageRepository extends AbstractRepository imple
             $productOfferServiceStorageQuery->filterByProductOfferReference_In($productOfferReferences);
         }
 
+        $productOfferServiceStorageQuery = $productOfferServiceStorageQuery->orderByIdProductOfferServiceStorage();
+
         /** @var array<\Generated\Shared\Transfer\SynchronizationDataTransfer> */
         return $this->buildQueryFromCriteria($productOfferServiceStorageQuery, $filterTransfer)
             ->setFormatter(SynchronizationDataTransferObjectFormatter::class)
