@@ -20,7 +20,7 @@ class ProductOfferServicePointStorageRepository extends AbstractRepository imple
      * @param \Generated\Shared\Transfer\FilterTransfer $filterTransfer
      * @param list<string> $productOfferReferences
      *
-     * @return list<\Generated\Shared\Transfer\SynchronizationDataTransfer>
+     * @return array<\Generated\Shared\Transfer\SynchronizationDataTransfer>
      */
     public function getProductOfferServiceStorageSynchronizationDataTransfers(FilterTransfer $filterTransfer, array $productOfferReferences = []): array
     {

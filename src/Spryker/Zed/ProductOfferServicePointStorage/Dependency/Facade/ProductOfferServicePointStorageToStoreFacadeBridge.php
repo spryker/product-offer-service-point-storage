@@ -23,7 +23,7 @@ class ProductOfferServicePointStorageToStoreFacadeBridge implements ProductOffer
     }
 
     /**
-     * @return list<\Generated\Shared\Transfer\StoreTransfer>
+     * @return array<\Generated\Shared\Transfer\StoreTransfer>
      */
     public function getAllStores(): array
     {

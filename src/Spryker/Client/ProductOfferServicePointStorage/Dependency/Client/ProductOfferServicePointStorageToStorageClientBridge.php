@@ -25,7 +25,7 @@ class ProductOfferServicePointStorageToStorageClientBridge implements ProductOff
     /**
      * @param list<string> $keys
      *
-     * @return list<string>
+     * @return array<string>
      */
     public function getMulti(array $keys): array
     {
