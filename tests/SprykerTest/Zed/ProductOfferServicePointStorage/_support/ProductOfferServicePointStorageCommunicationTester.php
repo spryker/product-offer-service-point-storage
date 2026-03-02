@@ -31,9 +31,6 @@ class ProductOfferServicePointStorageCommunicationTester extends Actor
 {
     use _generated\ProductOfferServicePointStorageCommunicationTesterActions;
 
-    /**
-     * @return void
-     */
     public function ensureProductOfferServiceTableAndRelationsAreEmpty(): void
     {
         $this->ensureDatabaseTableIsEmpty($this->getProductOfferServiceQuery());
@@ -43,41 +40,26 @@ class ProductOfferServicePointStorageCommunicationTester extends Actor
         $this->ensureDatabaseTableIsEmpty($this->getServiceTypeQuery());
     }
 
-    /**
-     * @return \Orm\Zed\ProductOfferServicePoint\Persistence\SpyProductOfferServiceQuery
-     */
     protected function getProductOfferServiceQuery(): SpyProductOfferServiceQuery
     {
         return SpyProductOfferServiceQuery::create();
     }
 
-    /**
-     * @return \Orm\Zed\ProductOffer\Persistence\SpyProductOfferQuery
-     */
     protected function getProductOfferQuery(): SpyProductOfferQuery
     {
         return SpyProductOfferQuery::create();
     }
 
-    /**
-     * @return \Orm\Zed\ServicePoint\Persistence\SpyServiceQuery
-     */
     protected function getServiceQuery(): SpyServiceQuery
     {
         return SpyServiceQuery::create();
     }
 
-    /**
-     * @return \Orm\Zed\ServicePoint\Persistence\SpyServicePointQuery
-     */
     protected function getServicePointQuery(): SpyServicePointQuery
     {
         return SpyServicePointQuery::create();
     }
 
-    /**
-     * @return \Orm\Zed\ServicePoint\Persistence\SpyServiceTypeQuery
-     */
     protected function getServiceTypeQuery(): SpyServiceTypeQuery
     {
         return SpyServiceTypeQuery::create();

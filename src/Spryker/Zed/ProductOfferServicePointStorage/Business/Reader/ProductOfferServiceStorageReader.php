@@ -31,11 +31,6 @@ class ProductOfferServiceStorageReader implements ProductOfferServiceStorageRead
      */
     protected ProductOfferReaderInterface $productOfferReader;
 
-    /**
-     * @param \Spryker\Zed\ProductOfferServicePointStorage\Persistence\ProductOfferServicePointStorageRepositoryInterface $productOfferServicePointStorageRepository
-     * @param \Spryker\Zed\ProductOfferServicePointStorage\Dependency\Facade\ProductOfferServicePointStorageToProductOfferServicePointFacadeInterface $productOfferServicePointFacade
-     * @param \Spryker\Zed\ProductOfferServicePointStorage\Business\Reader\ProductOfferReaderInterface $productOfferReader
-     */
     public function __construct(
         ProductOfferServicePointStorageRepositoryInterface $productOfferServicePointStorageRepository,
         ProductOfferServicePointStorageToProductOfferServicePointFacadeInterface $productOfferServicePointFacade,

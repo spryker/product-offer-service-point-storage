@@ -177,12 +177,6 @@ class ProductOfferServiceStorageWriter implements ProductOfferServiceStorageWrit
         return $processedProductOfferIds;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ProductOfferServicesTransfer $productOfferServicesTransfer
-     * @param \Generated\Shared\Transfer\StoreTransfer $storeTransfer
-     *
-     * @return bool
-     */
     protected function isProductOfferServicesAvailableInStore(ProductOfferServicesTransfer $productOfferServicesTransfer, StoreTransfer $storeTransfer): bool
     {
         if (!$this->isProductOfferAvailableInStore($productOfferServicesTransfer->getProductOfferOrFail(), $storeTransfer)) {
@@ -195,12 +189,6 @@ class ProductOfferServiceStorageWriter implements ProductOfferServiceStorageWrit
         return $this->isServiceAvailableInStore($serviceTransfers->getIterator()->current(), $storeTransfer);
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ProductOfferTransfer $productOfferTransfer
-     * @param \Generated\Shared\Transfer\StoreTransfer $storeTransfer
-     *
-     * @return bool
-     */
     protected function isProductOfferAvailableInStore(ProductOfferTransfer $productOfferTransfer, StoreTransfer $storeTransfer): bool
     {
         foreach ($productOfferTransfer->getStores() as $productOfferStoreTransfer) {
@@ -212,12 +200,6 @@ class ProductOfferServiceStorageWriter implements ProductOfferServiceStorageWrit
         return false;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ServiceTransfer $serviceTransfer
-     * @param \Generated\Shared\Transfer\StoreTransfer $storeTransfer
-     *
-     * @return bool
-     */
     protected function isServiceAvailableInStore(ServiceTransfer $serviceTransfer, StoreTransfer $storeTransfer): bool
     {
         if (!$serviceTransfer->getServicePointOrFail()->getStoreRelation()) {

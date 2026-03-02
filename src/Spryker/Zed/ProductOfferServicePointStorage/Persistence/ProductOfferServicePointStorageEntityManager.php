@@ -15,12 +15,6 @@ use Spryker\Zed\Kernel\Persistence\AbstractEntityManager;
  */
 class ProductOfferServicePointStorageEntityManager extends AbstractEntityManager implements ProductOfferServicePointStorageEntityManagerInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\ProductOfferServiceStorageTransfer $productOfferServiceStorageTransfer
-     * @param string $storeName
-     *
-     * @return void
-     */
     public function saveProductOfferServiceForStore(
         ProductOfferServiceStorageTransfer $productOfferServiceStorageTransfer,
         string $storeName

@@ -13,11 +13,6 @@ use Generated\Shared\Transfer\ProductOfferServiceCriteriaTransfer;
 
 interface ProductOfferServicePointStorageToProductOfferServicePointFacadeInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\ProductOfferServiceCriteriaTransfer $productOfferServiceCriteriaTransfer
-     *
-     * @return \Generated\Shared\Transfer\ProductOfferServiceCollectionTransfer
-     */
     public function getProductOfferServiceCollection(
         ProductOfferServiceCriteriaTransfer $productOfferServiceCriteriaTransfer
     ): ProductOfferServiceCollectionTransfer;

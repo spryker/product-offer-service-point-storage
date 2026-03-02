@@ -32,9 +32,6 @@ use Spryker\Client\ProductOfferServicePointStorage\Reader\ServicePointStorageRea
 
 class ProductOfferServicePointStorageFactory extends AbstractFactory
 {
-    /**
-     * @return \Spryker\Client\ProductOfferServicePointStorage\Expander\ProductOfferStorageServiceExpanderInterface
-     */
     public function createProductOfferStorageServiceExpander(): ProductOfferStorageServiceExpanderInterface
     {
         return new ProductOfferStorageServiceExpander(
@@ -46,33 +43,21 @@ class ProductOfferServicePointStorageFactory extends AbstractFactory
         );
     }
 
-    /**
-     * @return \Spryker\Client\ProductOfferServicePointStorage\Extractor\ServicePointStorageExtractorInterface
-     */
     public function createServicePointStorageExtractor(): ServicePointStorageExtractorInterface
     {
         return new ServicePointStorageExtractor();
     }
 
-    /**
-     * @return \Spryker\Client\ProductOfferServicePointStorage\Extractor\ProductOfferStorageExtractorInterface
-     */
     public function createProductOfferStorageExtractor(): ProductOfferStorageExtractorInterface
     {
         return new ProductOfferStorageExtractor();
     }
 
-    /**
-     * @return \Spryker\Client\ProductOfferServicePointStorage\Extractor\ProductOfferServiceStorageExtractorInterface
-     */
     public function createProductOfferServiceStorageExtractor(): ProductOfferServiceStorageExtractorInterface
     {
         return new ProductOfferServiceStorageExtractor();
     }
 
-    /**
-     * @return \Spryker\Client\ProductOfferServicePointStorage\Reader\ProductOfferServiceStorageReaderInterface
-     */
     public function createProductOfferServiceStorageReader(): ProductOfferServiceStorageReaderInterface
     {
         return new ProductOfferServiceStorageReader(
@@ -84,9 +69,6 @@ class ProductOfferServicePointStorageFactory extends AbstractFactory
         );
     }
 
-    /**
-     * @return \Spryker\Client\ProductOfferServicePointStorage\Generator\ProductOfferServiceStorageKeyGeneratorInterface
-     */
     public function createProductOfferServiceStorageKeyGenerator(): ProductOfferServiceStorageKeyGeneratorInterface
     {
         return new ProductOfferServiceStorageKeyGenerator(
@@ -94,9 +76,6 @@ class ProductOfferServicePointStorageFactory extends AbstractFactory
         );
     }
 
-    /**
-     * @return \Spryker\Client\ProductOfferServicePointStorage\Reader\ServicePointStorageReaderInterface
-     */
     public function createServicePointStorageReader(): ServicePointStorageReaderInterface
     {
         return new ServicePointStorageReader(
@@ -105,49 +84,31 @@ class ProductOfferServicePointStorageFactory extends AbstractFactory
         );
     }
 
-    /**
-     * @return \Spryker\Client\ProductOfferServicePointStorage\Mapper\ProductOfferServiceStorageMapperInterface
-     */
     public function createProductOfferServiceStorageMapper(): ProductOfferServiceStorageMapperInterface
     {
         return new ProductOfferServiceStorageMapper();
     }
 
-    /**
-     * @return \Spryker\Client\ProductOfferServicePointStorage\Dependency\Client\ProductOfferServicePointStorageToStoreClientInterface
-     */
     public function getStoreClient(): ProductOfferServicePointStorageToStoreClientInterface
     {
         return $this->getProvidedDependency(ProductOfferServicePointStorageDependencyProvider::CLIENT_STORE);
     }
 
-    /**
-     * @return \Spryker\Client\ProductOfferServicePointStorage\Dependency\Client\ProductOfferServicePointStorageToStorageClientInterface
-     */
     public function getStorageClient(): ProductOfferServicePointStorageToStorageClientInterface
     {
         return $this->getProvidedDependency(ProductOfferServicePointStorageDependencyProvider::CLIENT_STORAGE);
     }
 
-    /**
-     * @return \Spryker\Client\ProductOfferServicePointStorage\Dependency\Client\ProductOfferServicePointStorageToServicePointStorageClientInterface
-     */
     public function getServicePointStorageClient(): ProductOfferServicePointStorageToServicePointStorageClientInterface
     {
         return $this->getProvidedDependency(ProductOfferServicePointStorageDependencyProvider::CLIENT_SERVICE_POINT_STORAGE);
     }
 
-    /**
-     * @return \Spryker\Client\ProductOfferServicePointStorage\Dependency\Service\ProductOfferServicePointStorageToSynchronizationServiceInterface
-     */
     public function getSynchronizationService(): ProductOfferServicePointStorageToSynchronizationServiceInterface
     {
         return $this->getProvidedDependency(ProductOfferServicePointStorageDependencyProvider::SERVICE_SYNCHRONIZATION);
     }
 
-    /**
-     * @return \Spryker\Client\ProductOfferServicePointStorage\Dependency\Service\ProductOfferServicePointStorageToUtilEncodingServiceInterface
-     */
     public function getUtilEncodingService(): ProductOfferServicePointStorageToUtilEncodingServiceInterface
     {
         return $this->getProvidedDependency(ProductOfferServicePointStorageDependencyProvider::SERVICE_UTIL_ENCODING);

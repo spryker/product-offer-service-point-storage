@@ -42,9 +42,6 @@ class ProductOfferServicePublisherTriggerPluginTest extends Unit
      */
     protected ProductOfferServicePointStorageCommunicationTester $tester;
 
-    /**
-     * @return void
-     */
     protected function setUp(): void
     {
         parent::setUp();

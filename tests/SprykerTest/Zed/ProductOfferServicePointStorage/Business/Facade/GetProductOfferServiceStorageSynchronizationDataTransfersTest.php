@@ -36,9 +36,6 @@ class GetProductOfferServiceStorageSynchronizationDataTransfersTest extends Unit
      */
     protected ProductOfferServicePointStorageBusinessTester $tester;
 
-    /**
-     * @return void
-     */
     protected function setUp(): void
     {
         parent::setUp();
@@ -81,9 +78,6 @@ class GetProductOfferServiceStorageSynchronizationDataTransfersTest extends Unit
         $this->assertCount($expectedCount, $productOfferServiceStorageSynchronizationDataTransfers);
     }
 
-    /**
-     * @return void
-     */
     public function testShouldReturnCorrectCollectionWhenCorrectProductOfferServiceIdsAreProvided(): void
     {
         // Arrange

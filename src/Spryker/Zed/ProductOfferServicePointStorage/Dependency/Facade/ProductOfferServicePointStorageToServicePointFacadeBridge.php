@@ -25,11 +25,6 @@ class ProductOfferServicePointStorageToServicePointFacadeBridge implements Produ
         $this->servicePointFacade = $servicePointFacade;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ServiceCriteriaTransfer $serviceCriteriaTransfer
-     *
-     * @return \Generated\Shared\Transfer\ServiceCollectionTransfer
-     */
     public function getServiceCollection(
         ServiceCriteriaTransfer $serviceCriteriaTransfer
     ): ServiceCollectionTransfer {

@@ -25,10 +25,6 @@ class ServicePointStorageReader implements ServicePointStorageReaderInterface
      */
     protected ProductOfferServicePointStorageToStoreClientInterface $storeClient;
 
-    /**
-     * @param \Spryker\Client\ProductOfferServicePointStorage\Dependency\Client\ProductOfferServicePointStorageToServicePointStorageClientInterface $servicePointStorageClient
-     * @param \Spryker\Client\ProductOfferServicePointStorage\Dependency\Client\ProductOfferServicePointStorageToStoreClientInterface $storeClient
-     */
     public function __construct(
         ProductOfferServicePointStorageToServicePointStorageClientInterface $servicePointStorageClient,
         ProductOfferServicePointStorageToStoreClientInterface $storeClient

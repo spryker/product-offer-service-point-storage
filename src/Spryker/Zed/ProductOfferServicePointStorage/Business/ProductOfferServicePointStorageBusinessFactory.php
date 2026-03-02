@@ -36,9 +36,6 @@ use Spryker\Zed\ProductOfferServicePointStorage\ProductOfferServicePointStorageD
  */
 class ProductOfferServicePointStorageBusinessFactory extends AbstractBusinessFactory
 {
-    /**
-     * @return \Spryker\Zed\ProductOfferServicePointStorage\Business\Writer\ProductOffer\ProductOfferServiceStorageByProductOfferEventsWriterInterface
-     */
     public function createProductOfferServiceStorageByProductOfferEventsWriter(): ProductOfferServiceStorageByProductOfferEventsWriterInterface
     {
         return new ProductOfferServiceStorageByProductOfferEventsWriter(
@@ -47,9 +44,6 @@ class ProductOfferServicePointStorageBusinessFactory extends AbstractBusinessFac
         );
     }
 
-    /**
-     * @return \Spryker\Zed\ProductOfferServicePointStorage\Business\Writer\ProductOfferService\ProductOfferServiceStorageByProductOfferServiceEventsWriterInterface
-     */
     public function createProductOfferServiceStorageByProductOfferServiceEventsWriter(): ProductOfferServiceStorageByProductOfferServiceEventsWriterInterface
     {
         return new ProductOfferServiceStorageByProductOfferServiceEventsWriter(
@@ -59,9 +53,6 @@ class ProductOfferServicePointStorageBusinessFactory extends AbstractBusinessFac
         );
     }
 
-    /**
-     * @return \Spryker\Zed\ProductOfferServicePointStorage\Business\Writer\ServicePoint\ProductOfferServiceStorageByServicePointEventsWriterInterface
-     */
     public function createProductOfferServiceStorageByServicePointEventsWriter(): ProductOfferServiceStorageByServicePointEventsWriterInterface
     {
         return new ProductOfferServiceStorageByServicePointEventsWriter(
@@ -73,9 +64,6 @@ class ProductOfferServicePointStorageBusinessFactory extends AbstractBusinessFac
         );
     }
 
-    /**
-     * @return \Spryker\Zed\ProductOfferServicePointStorage\Business\Writer\ProductOfferServiceStorageWriterInterface
-     */
     public function createProductOfferServiceStorageWriter(): ProductOfferServiceStorageWriterInterface
     {
         return new ProductOfferServiceStorageWriter(
@@ -89,17 +77,11 @@ class ProductOfferServicePointStorageBusinessFactory extends AbstractBusinessFac
         );
     }
 
-    /**
-     * @return \Spryker\Zed\ProductOfferServicePointStorage\Business\Mapper\ProductOfferServiceMapperInterface
-     */
     public function createProductOfferServiceMapper(): ProductOfferServiceMapperInterface
     {
         return new ProductOfferServiceMapper();
     }
 
-    /**
-     * @return \Spryker\Zed\ProductOfferServicePointStorage\Business\Reader\ProductOfferServiceStorageReaderInterface
-     */
     public function createProductOfferServiceStorageReader(): ProductOfferServiceStorageReaderInterface
     {
         return new ProductOfferServiceStorageReader(
@@ -109,49 +91,31 @@ class ProductOfferServicePointStorageBusinessFactory extends AbstractBusinessFac
         );
     }
 
-    /**
-     * @return \Spryker\Zed\ProductOfferServicePointStorage\Business\Reader\ProductOfferReaderInterface
-     */
     public function createProductOfferReader(): ProductOfferReaderInterface
     {
         return new ProductOfferReader($this->getProductOfferFacade());
     }
 
-    /**
-     * @return \Spryker\Zed\ProductOfferServicePointStorage\Dependency\Facade\ProductOfferServicePointStorageToProductOfferServicePointFacadeInterface
-     */
     public function getProductOfferServicePointFacade(): ProductOfferServicePointStorageToProductOfferServicePointFacadeInterface
     {
         return $this->getProvidedDependency(ProductOfferServicePointStorageDependencyProvider::FACADE_PRODUCT_OFFER_SERVICE_POINT);
     }
 
-    /**
-     * @return \Spryker\Zed\ProductOfferServicePointStorage\Dependency\Facade\ProductOfferServicePointStorageToProductOfferFacadeInterface
-     */
     public function getProductOfferFacade(): ProductOfferServicePointStorageToProductOfferFacadeInterface
     {
         return $this->getProvidedDependency(ProductOfferServicePointStorageDependencyProvider::FACADE_PRODUCT_OFFER);
     }
 
-    /**
-     * @return \Spryker\Zed\ProductOfferServicePointStorage\Dependency\Facade\ProductOfferServicePointStorageToServicePointFacadeInterface
-     */
     public function getServicePointFacade(): ProductOfferServicePointStorageToServicePointFacadeInterface
     {
         return $this->getProvidedDependency(ProductOfferServicePointStorageDependencyProvider::FACADE_SERVICE_POINT);
     }
 
-    /**
-     * @return \Spryker\Zed\ProductOfferServicePointStorage\Dependency\Facade\ProductOfferServicePointStorageToEventBehaviorFacadeInterface
-     */
     public function getEventBehaviorFacade(): ProductOfferServicePointStorageToEventBehaviorFacadeInterface
     {
         return $this->getProvidedDependency(ProductOfferServicePointStorageDependencyProvider::FACADE_EVENT_BEHAVIOR);
     }
 
-    /**
-     * @return \Spryker\Zed\ProductOfferServicePointStorage\Dependency\Facade\ProductOfferServicePointStorageToStoreFacadeInterface
-     */
     public function getStoreFacade(): ProductOfferServicePointStorageToStoreFacadeInterface
     {
         return $this->getProvidedDependency(ProductOfferServicePointStorageDependencyProvider::FACADE_STORE);

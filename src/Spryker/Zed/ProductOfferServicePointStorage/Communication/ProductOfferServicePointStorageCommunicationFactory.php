@@ -19,9 +19,6 @@ use Spryker\Zed\ProductOfferServicePointStorage\ProductOfferServicePointStorageD
  */
 class ProductOfferServicePointStorageCommunicationFactory extends AbstractCommunicationFactory
 {
-    /**
-     * @return \Spryker\Zed\ProductOfferServicePointStorage\Dependency\Facade\ProductOfferServicePointStorageToProductOfferServicePointFacadeInterface
-     */
     public function getProductOfferServicePointFacade(): ProductOfferServicePointStorageToProductOfferServicePointFacadeInterface
     {
         return $this->getProvidedDependency(ProductOfferServicePointStorageDependencyProvider::FACADE_PRODUCT_OFFER_SERVICE_POINT);

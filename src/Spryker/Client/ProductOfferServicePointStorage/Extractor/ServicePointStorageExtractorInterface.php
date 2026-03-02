@@ -12,11 +12,6 @@ use Generated\Shared\Transfer\ServiceStorageCollectionTransfer;
 
 interface ServicePointStorageExtractorInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\ServicePointStorageCollectionTransfer $servicePointStorageCollectionTransfer
-     *
-     * @return \Generated\Shared\Transfer\ServiceStorageCollectionTransfer
-     */
     public function extractServiceStorageCollectionFromServicePointStorageCollectionTransfer(
         ServicePointStorageCollectionTransfer $servicePointStorageCollectionTransfer
     ): ServiceStorageCollectionTransfer;

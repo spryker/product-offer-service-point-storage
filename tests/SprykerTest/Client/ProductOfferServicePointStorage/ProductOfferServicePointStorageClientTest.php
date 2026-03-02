@@ -88,9 +88,6 @@ class ProductOfferServicePointStorageClientTest extends Unit
      */
     protected ProductOfferServicePointStorageClientTester $tester;
 
-    /**
-     * @return void
-     */
     public function testExpandProductOfferStorageCollectionWithServicesShouldReturnCollectionWithServices(): void
     {
         // Arrange
@@ -167,9 +164,6 @@ class ProductOfferServicePointStorageClientTest extends Unit
         }
     }
 
-    /**
-     * @return void
-     */
     public function testExpandProductOfferStorageCollectionWithServicesShouldReturnCollectionWithoutServicesWhenProductOfferHasNotServices(): void
     {
         // Arrange
@@ -188,9 +182,6 @@ class ProductOfferServicePointStorageClientTest extends Unit
         $this->assertCount(0, $productOfferStorageTransfer->getServices());
     }
 
-    /**
-     * @return void
-     */
     public function testExpandProductOfferStorageCollectionWithServicesShouldThrowAnExceptionWhenProductOfferReferenceIsMissing(): void
     {
         // Arrange

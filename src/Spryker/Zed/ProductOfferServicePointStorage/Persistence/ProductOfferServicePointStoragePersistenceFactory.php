@@ -18,17 +18,11 @@ use Spryker\Zed\ProductOfferServicePointStorage\Persistence\Propel\Mapper\Produc
  */
 class ProductOfferServicePointStoragePersistenceFactory extends AbstractPersistenceFactory
 {
-    /**
-     * @return \Orm\Zed\ProductOfferServicePointStorage\Persistence\SpyProductOfferServiceStorageQuery
-     */
     public function getProductOfferServiceStorageQuery(): SpyProductOfferServiceStorageQuery
     {
         return SpyProductOfferServiceStorageQuery::create();
     }
 
-    /**
-     * @return \Spryker\Zed\ProductOfferServicePointStorage\Persistence\Propel\Mapper\ProductOfferServiceStorageMapper
-     */
     public function createProductOfferServiceStorageMapper(): ProductOfferServiceStorageMapper
     {
         return new ProductOfferServiceStorageMapper();

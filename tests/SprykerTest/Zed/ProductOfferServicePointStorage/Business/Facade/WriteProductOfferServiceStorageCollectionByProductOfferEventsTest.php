@@ -38,9 +38,6 @@ class WriteProductOfferServiceStorageCollectionByProductOfferEventsTest extends 
      */
     protected ProductOfferServicePointStorageBusinessTester $tester;
 
-    /**
-     * @return void
-     */
     protected function setUp(): void
     {
         parent::setUp();
@@ -117,9 +114,6 @@ class WriteProductOfferServiceStorageCollectionByProductOfferEventsTest extends 
         );
     }
 
-    /**
-     * @return void
-     */
     public function testShouldNotPublishWhenProductOfferIdsAreNotProvided(): void
     {
         // Arrange
@@ -133,9 +127,6 @@ class WriteProductOfferServiceStorageCollectionByProductOfferEventsTest extends 
         $this->tester->getFacade()->writeProductOfferServiceStorageCollectionByProductOfferEvents([new EventEntityTransfer()]);
     }
 
-    /**
-     * @return void
-     */
     public function testShouldNotPublishWhenProductOfferDoesNotExist(): void
     {
         // Arrange

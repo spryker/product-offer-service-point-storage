@@ -42,13 +42,6 @@ class ProductOfferServiceStorageReader implements ProductOfferServiceStorageRead
      */
     protected ProductOfferServiceStorageMapperInterface $productOfferServiceStorageMapper;
 
-    /**
-     * @param \Spryker\Client\ProductOfferServicePointStorage\Dependency\Client\ProductOfferServicePointStorageToStoreClientInterface $storeClient
-     * @param \Spryker\Client\ProductOfferServicePointStorage\Dependency\Client\ProductOfferServicePointStorageToStorageClientInterface $storageClient
-     * @param \Spryker\Client\ProductOfferServicePointStorage\Generator\ProductOfferServiceStorageKeyGeneratorInterface $productOfferServiceStorageKeyGenerator
-     * @param \Spryker\Client\ProductOfferServicePointStorage\Dependency\Service\ProductOfferServicePointStorageToUtilEncodingServiceInterface $utilEncodingService
-     * @param \Spryker\Client\ProductOfferServicePointStorage\Mapper\ProductOfferServiceStorageMapperInterface $productOfferServiceStorageMapper
-     */
     public function __construct(
         ProductOfferServicePointStorageToStoreClientInterface $storeClient,
         ProductOfferServicePointStorageToStorageClientInterface $storageClient,

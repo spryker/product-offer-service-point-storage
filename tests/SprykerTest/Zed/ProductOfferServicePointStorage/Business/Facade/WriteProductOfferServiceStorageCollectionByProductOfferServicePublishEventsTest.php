@@ -29,9 +29,6 @@ class WriteProductOfferServiceStorageCollectionByProductOfferServicePublishEvent
      */
     protected ProductOfferServicePointStorageBusinessTester $tester;
 
-    /**
-     * @return void
-     */
     protected function setUp(): void
     {
         parent::setUp();

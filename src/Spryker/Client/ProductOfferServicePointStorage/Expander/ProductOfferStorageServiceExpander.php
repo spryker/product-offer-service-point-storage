@@ -44,13 +44,6 @@ class ProductOfferStorageServiceExpander implements ProductOfferStorageServiceEx
      */
     protected ServicePointStorageExtractorInterface $servicePointStorageExtractor;
 
-    /**
-     * @param \Spryker\Client\ProductOfferServicePointStorage\Extractor\ProductOfferStorageExtractorInterface $productOfferStorageExtractor
-     * @param \Spryker\Client\ProductOfferServicePointStorage\Reader\ProductOfferServiceStorageReaderInterface $productOfferServiceStorageReader
-     * @param \Spryker\Client\ProductOfferServicePointStorage\Extractor\ProductOfferServiceStorageExtractorInterface $productOfferServiceStorageExtractor
-     * @param \Spryker\Client\ProductOfferServicePointStorage\Reader\ServicePointStorageReaderInterface $servicePointStorageReader
-     * @param \Spryker\Client\ProductOfferServicePointStorage\Extractor\ServicePointStorageExtractorInterface $servicePointStorageExtractor
-     */
     public function __construct(
         ProductOfferStorageExtractorInterface $productOfferStorageExtractor,
         ProductOfferServiceStorageReaderInterface $productOfferServiceStorageReader,
@@ -65,11 +58,6 @@ class ProductOfferStorageServiceExpander implements ProductOfferStorageServiceEx
         $this->servicePointStorageExtractor = $servicePointStorageExtractor;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ProductOfferStorageCollectionTransfer $productOfferStorageCollectionTransfer
-     *
-     * @return \Generated\Shared\Transfer\ProductOfferStorageCollectionTransfer
-     */
     public function expandProductOfferStorageCollection(
         ProductOfferStorageCollectionTransfer $productOfferStorageCollectionTransfer
     ): ProductOfferStorageCollectionTransfer {

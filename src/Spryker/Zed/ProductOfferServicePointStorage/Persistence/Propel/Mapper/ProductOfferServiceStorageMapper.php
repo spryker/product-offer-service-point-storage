@@ -12,12 +12,6 @@ use Orm\Zed\ProductOfferServicePointStorage\Persistence\SpyProductOfferServiceSt
 
 class ProductOfferServiceStorageMapper
 {
-    /**
-     * @param \Generated\Shared\Transfer\ProductOfferServiceStorageTransfer $productOfferServiceStorageTransfer
-     * @param \Orm\Zed\ProductOfferServicePointStorage\Persistence\SpyProductOfferServiceStorage $productOfferServiceStorageEntity
-     *
-     * @return \Orm\Zed\ProductOfferServicePointStorage\Persistence\SpyProductOfferServiceStorage
-     */
     public function mapProductOfferServiceStorageTransferToProductOfferServiceStorageEntity(
         ProductOfferServiceStorageTransfer $productOfferServiceStorageTransfer,
         SpyProductOfferServiceStorage $productOfferServiceStorageEntity

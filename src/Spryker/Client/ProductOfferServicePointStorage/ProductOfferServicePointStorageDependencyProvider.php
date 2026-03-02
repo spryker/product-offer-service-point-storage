@@ -42,11 +42,6 @@ class ProductOfferServicePointStorageDependencyProvider extends AbstractDependen
      */
     public const SERVICE_UTIL_ENCODING = 'SERVICE_UTIL_ENCODING';
 
-    /**
-     * @param \Spryker\Client\Kernel\Container $container
-     *
-     * @return \Spryker\Client\Kernel\Container
-     */
     public function provideServiceLayerDependencies(Container $container): Container
     {
         $container = parent::provideServiceLayerDependencies($container);
@@ -60,11 +55,6 @@ class ProductOfferServicePointStorageDependencyProvider extends AbstractDependen
         return $container;
     }
 
-    /**
-     * @param \Spryker\Client\Kernel\Container $container
-     *
-     * @return \Spryker\Client\Kernel\Container
-     */
     protected function addClientStore(Container $container): Container
     {
         $container->set(static::CLIENT_STORE, function (Container $container) {
@@ -76,11 +66,6 @@ class ProductOfferServicePointStorageDependencyProvider extends AbstractDependen
         return $container;
     }
 
-    /**
-     * @param \Spryker\Client\Kernel\Container $container
-     *
-     * @return \Spryker\Client\Kernel\Container
-     */
     protected function addServicePointStorageClient(Container $container): Container
     {
         $container->set(static::CLIENT_SERVICE_POINT_STORAGE, function (Container $container) {
@@ -92,11 +77,6 @@ class ProductOfferServicePointStorageDependencyProvider extends AbstractDependen
         return $container;
     }
 
-    /**
-     * @param \Spryker\Client\Kernel\Container $container
-     *
-     * @return \Spryker\Client\Kernel\Container
-     */
     protected function addStorageClient(Container $container): Container
     {
         $container->set(static::CLIENT_STORAGE, function (Container $container) {
@@ -108,11 +88,6 @@ class ProductOfferServicePointStorageDependencyProvider extends AbstractDependen
         return $container;
     }
 
-    /**
-     * @param \Spryker\Client\Kernel\Container $container
-     *
-     * @return \Spryker\Client\Kernel\Container
-     */
     protected function addSynchronizationService(Container $container): Container
     {
         $container->set(static::SERVICE_SYNCHRONIZATION, function (Container $container) {
@@ -124,11 +99,6 @@ class ProductOfferServicePointStorageDependencyProvider extends AbstractDependen
         return $container;
     }
 
-    /**
-     * @param \Spryker\Client\Kernel\Container $container
-     *
-     * @return \Spryker\Client\Kernel\Container
-     */
     protected function addUtilEncodingService(Container $container): Container
     {
         $container->set(static::SERVICE_UTIL_ENCODING, function (Container $container) {

@@ -310,9 +310,6 @@ class ProductOfferServicePointStorageBusinessTester extends Actor
         ];
     }
 
-    /**
-     * @return void
-     */
     public function ensureProductOfferServiceStorageTableAndRelationsAreEmpty(): void
     {
         $this->ensureDatabaseTableIsEmpty($this->getProductOfferServiceStorageQuery());
@@ -323,9 +320,6 @@ class ProductOfferServicePointStorageBusinessTester extends Actor
         $this->ensureDatabaseTableIsEmpty($this->getServiceTypeQuery());
     }
 
-    /**
-     * @return void
-     */
     public function setDependencies(): void
     {
         $this->setDependency(QueueDependencyProvider::QUEUE_ADAPTERS, function (Container $container) {
@@ -357,11 +351,6 @@ class ProductOfferServicePointStorageBusinessTester extends Actor
         }
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ProductOfferServiceTransfer $productOfferServiceTransfer
-     *
-     * @return int|null
-     */
     public function findIdProductOfferService(ProductOfferServiceTransfer $productOfferServiceTransfer): ?int
     {
         $productOfferServiceEntity = $this->getProductOfferServiceQuery()
@@ -534,49 +523,31 @@ class ProductOfferServicePointStorageBusinessTester extends Actor
         return $this->haveServicePoint($servicePointTransfer->toArray());
     }
 
-    /**
-     * @return \Orm\Zed\ProductOfferServicePointStorage\Persistence\SpyProductOfferServiceStorageQuery
-     */
     protected function getProductOfferServiceStorageQuery(): SpyProductOfferServiceStorageQuery
     {
         return SpyProductOfferServiceStorageQuery::create();
     }
 
-    /**
-     * @return \Orm\Zed\ProductOfferServicePoint\Persistence\SpyProductOfferServiceQuery
-     */
     protected function getProductOfferServiceQuery(): SpyProductOfferServiceQuery
     {
         return SpyProductOfferServiceQuery::create();
     }
 
-    /**
-     * @return \Orm\Zed\ProductOffer\Persistence\SpyProductOfferQuery
-     */
     protected function getProductOfferQuery(): SpyProductOfferQuery
     {
         return SpyProductOfferQuery::create();
     }
 
-    /**
-     * @return \Orm\Zed\ServicePoint\Persistence\SpyServiceQuery
-     */
     protected function getServiceQuery(): SpyServiceQuery
     {
         return SpyServiceQuery::create();
     }
 
-    /**
-     * @return \Orm\Zed\ServicePoint\Persistence\SpyServicePointQuery
-     */
     protected function getServicePointQuery(): SpyServicePointQuery
     {
         return SpyServicePointQuery::create();
     }
 
-    /**
-     * @return \Orm\Zed\ServicePoint\Persistence\SpyServiceTypeQuery
-     */
     protected function getServiceTypeQuery(): SpyServiceTypeQuery
     {
         return SpyServiceTypeQuery::create();

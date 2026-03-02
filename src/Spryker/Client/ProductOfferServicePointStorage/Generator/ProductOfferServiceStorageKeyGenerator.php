@@ -18,9 +18,6 @@ class ProductOfferServiceStorageKeyGenerator implements ProductOfferServiceStora
      */
     protected ProductOfferServicePointStorageToSynchronizationServiceInterface $synchronizationService;
 
-    /**
-     * @param \Spryker\Client\ProductOfferServicePointStorage\Dependency\Service\ProductOfferServicePointStorageToSynchronizationServiceInterface $synchronizationService
-     */
     public function __construct(ProductOfferServicePointStorageToSynchronizationServiceInterface $synchronizationService)
     {
         $this->synchronizationService = $synchronizationService;
@@ -42,12 +39,6 @@ class ProductOfferServiceStorageKeyGenerator implements ProductOfferServiceStora
         return $storageKeys;
     }
 
-    /**
-     * @param string $reference
-     * @param string $storeName
-     *
-     * @return string
-     */
     protected function generateKey(string $reference, string $storeName): string
     {
         $synchronizationDataTransfer = (new SynchronizationDataTransfer())

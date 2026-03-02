@@ -12,12 +12,6 @@ use Generated\Shared\Transfer\ProductOfferServicesTransfer;
 
 class ProductOfferServiceMapper implements ProductOfferServiceMapperInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\ProductOfferServicesTransfer $productOfferServicesTransfer
-     * @param \Generated\Shared\Transfer\ProductOfferServiceStorageTransfer $productOfferServiceStorageTransfer
-     *
-     * @return \Generated\Shared\Transfer\ProductOfferServiceStorageTransfer
-     */
     public function mapProductOfferServicesTransferToProductOfferServiceStorageTransfer(
         ProductOfferServicesTransfer $productOfferServicesTransfer,
         ProductOfferServiceStorageTransfer $productOfferServiceStorageTransfer
