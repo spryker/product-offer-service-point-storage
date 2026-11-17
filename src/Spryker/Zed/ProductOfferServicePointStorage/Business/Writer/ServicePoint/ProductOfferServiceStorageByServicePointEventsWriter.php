@@ -147,9 +147,8 @@ class ProductOfferServiceStorageByServicePointEventsWriter implements ProductOff
             );
 
             $offset += $readCollectionBatchSize;
-        } while (
-            count($productOfferServiceCollectionTransfer->getProductOfferServices()) !== 0
-        );
+            $hasNextBatch = count($productOfferServiceCollectionTransfer->getProductOfferServices()) !== 0;
+        } while ($hasNextBatch);
     }
 
     /**
